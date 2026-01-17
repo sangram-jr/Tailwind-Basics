@@ -20,6 +20,21 @@ const  Page=()=>{
             id:3,
             quistion:"37. Prim's Algo",
             dificulty:"Hard"
+        },
+        {
+            id:4,
+            quistion:"39. Kruskal's Algo",
+            dificulty:"Hard"
+        },
+        {
+            id:5,
+            quistion:"37. Reverse LinkedList",
+            dificulty:"Easy"
+        },
+        {
+            id:3,
+            quistion:"5. Sqrt(x)",
+            dificulty:"Easy"
         }
     ]);
 
