@@ -13,21 +13,6 @@ const  Page=()=>{
         },
         {
             id:2,
-            quistion:"19. Sliding Window Maximum",
-            dificulty:"Medium"
-        },
-        {
-            id:3,
-            quistion:"37. Prim's Algo",
-            dificulty:"Hard"
-        },
-        {
-            id:4,
-            quistion:"39. Kruskal's Algo",
-            dificulty:"Hard"
-        },
-        {
-            id:5,
             quistion:"37. Reverse LinkedList",
             dificulty:"Easy"
         },
@@ -35,6 +20,51 @@ const  Page=()=>{
             id:3,
             quistion:"5. Sqrt(x)",
             dificulty:"Easy"
+        },
+        {
+            id:4,
+            quistion:"11. Prime Number",
+            dificulty:"Easy"
+        },
+        {
+            id:5,
+            quistion:"7. Binary Search ",
+            dificulty:"Easy"
+        },
+        {
+            id:6,
+            quistion:"81. Array Duplicates",
+            dificulty:"Easy"
+        },
+        {
+            id:7,
+            quistion:"105. Second Largest",
+            dificulty:"Easy"
+        },
+        {
+            id:8,
+            quistion:"89. Missing in Array",
+            dificulty:"Easy"
+        },
+        {
+            id:9,
+            quistion:"809. Count Inversion",
+            dificulty:"Medium"
+        },
+        {
+            id:10,
+            quistion:"19. Sliding Window Maximum",
+            dificulty:"Medium"
+        },
+        {
+            id:11,
+            quistion:"37. Prim's Algo",
+            dificulty:"Hard"
+        },
+        {
+            id:12,
+            quistion:"39. Kruskal's Algo",
+            dificulty:"Hard"
         }
     ]);
 
