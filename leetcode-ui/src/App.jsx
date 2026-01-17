@@ -1,0 +1,16 @@
+import Page from "./components/page"
+
+
+
+
+function App() {
+  
+
+  return (
+    <div>
+      <Page/>
+    </div>
+  )
+}
+
+export default App
