@@ -1,9 +1,10 @@
 import { useState } from "react";
+import Showdata from "./Showdata";
 
 
 const  Page=()=>{
 
-    
+    const[filter,setFilter]=useState(false);
     const [list,setList]=useState([
         {
             id:1,
@@ -23,13 +24,16 @@ const  Page=()=>{
     ]);
 
     
+    function changeFilter(){
+        setFilter(!filter);
+    }
 
     
 
-    
-    return(
+    if(!filter){
+        return(
             <div>
-                
+                <button onClick={changeFilter} className=" bg-red-500 cursor-pointer">Filter</button>
                 <div>
                     {
                         list.map((x)=>(
@@ -41,10 +45,11 @@ const  Page=()=>{
                 </div>
                 
             </div>
+        )
+    }
+    return(
+        <Showdata filter={filter} setFilter={setFilter} list={list} setList={setList}/>
     )
-    
-      
-    
     
 }
 export default Page;
