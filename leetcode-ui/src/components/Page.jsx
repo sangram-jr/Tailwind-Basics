@@ -77,9 +77,15 @@ const  Page=()=>{
 
     if(!filter){
         return(
-            <div>
-                <button onClick={changeFilter} className=" bg-red-500 cursor-pointer">Filter</button>
-                <div>
+            <div className="min-h-screen bg-neutral-900 grid grid-cols-12 gap-11">
+                <div className="grid col-span-2 bg-neutral-700">
+
+                </div>
+                <div className="grid col-span-4 bg-neutral-700">
+
+                </div>
+                <div className="grid col-span-6 bg-neutral-700 text-gray-200">
+                    <button onClick={changeFilter} className=" bg-red-500 cursor-pointer">Filter</button>
                     {
                         list.map((x)=>(
                             <div key={x.id}>
@@ -88,7 +94,6 @@ const  Page=()=>{
                         ))
                     }
                 </div>
-                
             </div>
         )
     }
