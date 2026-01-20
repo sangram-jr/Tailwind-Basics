@@ -78,18 +78,19 @@ const  Page=()=>{
     if(!filter){
         return(
             <div className="min-h-screen bg-neutral-900 grid grid-cols-12 gap-11">
-                <div className="grid col-span-2 bg-neutral-700">
+                <div className="grid col-span-2 bg-neutral-700 border-amber-50">
 
                 </div>
-                <div className="grid col-span-4 bg-neutral-700">
+                <div className="grid col-span-4 bg-neutral-800 mt-8 mb-30 ml-9 rounded-xl h-130">
 
                 </div>
-                <div className="grid col-span-6 bg-neutral-700 text-gray-200">
-                    <button onClick={changeFilter} className=" bg-red-500 cursor-pointer">Filter</button>
+                <div className="grid col-span-6 text-gray-200 mt-8 mr-8">
+                    <button onClick={changeFilter} className="cursor-pointer h-8 w-22 text-center font-semibold bg-gray-200 text-neutral-900 rounded-full">Filter</button>
                     {
                         list.map((x)=>(
-                            <div key={x.id}>
-                                <span>{x.quistion} {x.dificulty}</span>
+                            <div key={x.id} className="bg-neutral-800 p-6 flex justify-between rounded-2xl mb-1 mr-4 mt-4">
+                                <span className="font-bold">{x.quistion} </span>
+                                <span className="text-green-700 font-semibold">{x.dificulty}</span>
                             </div>
                         ))
                     }
