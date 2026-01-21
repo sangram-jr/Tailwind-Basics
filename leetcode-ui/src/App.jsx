@@ -1,5 +1,5 @@
 import Page from "./components/page"
-
+import './App.css'
 
 
 
@@ -11,6 +11,6 @@ function App() {
       <Page/>
     </div>
   )
-}
+} 
 
 export default App
