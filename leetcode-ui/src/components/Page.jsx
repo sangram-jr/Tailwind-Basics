@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Showdata from "./Showdata";
+import star from '../assets/star-icon.jpg'
 
 
 const  Page=()=>{
@@ -78,12 +79,32 @@ const  Page=()=>{
     if(!filter){
         return(
             <div className="min-h-screen bg-neutral-900 grid grid-cols-12 gap-11">
+
                 <div className="grid col-span-2 bg-neutral-700 border-amber-50">
 
                 </div>
-                <div className="grid col-span-4 bg-neutral-800 mt-8 mb-30 ml-9 rounded-xl h-130">
 
+                <div className="grid col-span-4 bg-neutral-800 mt-8 mb-30 ml-9 rounded-xl h-140">
+                    <img src={star} alt="star-png" className="h-21 w-20 rounded-md ml-8 mt-8"/>
+                    <h1 className="text-4xl text-gray-200 font-bold ml-8 -mt-9">Favorite</h1>
+                    <p className="text-gray-200 ml-8 -mt-9">Sangram . 19 quistions . private</p>
+                    <button className="ml-8 -mt-10 h-9 w-29 text-center font-semibold bg-gray-200 text-neutral-900 rounded-full">Practice</button>
+                    <div className="bg-neutral-700 h-px w-96 -mt-8 ml-8"></div>
+                    <p className=" text-gray-200 font-semibold ml-8 -mt-17">Progress</p>
+                    <div className="grid grid-cols-12 ml-8 -mt-21 mb-4">
+                        <div className="grid col-span-8 bg-neutral-700 mr-4 rounded-md  justify-center items-center">
+                            <div className=" w-37 h-37 rounded-full border-4 border-green-600 flex justify-center items-center">
+                                <div className="text-gray-200 text-md flex flex-col"><span className="font-semibold text-3xl">19/19</span>Solved</div>
+                            </div>
+                        </div>
+                        <div className="grid col-span-4 bg-neutral-800 mr-4 rounded-md">
+                            <div className="m-1 bg-neutral-700 rounded-md text-green-500 flex items-center justify-center">Easy</div>
+                            <div className="m-1 bg-neutral-700 rounded-md text-center text-yellow-500 flex items-center justify-center">Medium</div>
+                            <div className="m-1 bg-neutral-700 rounded-md text-center text-red-500 flex items-center justify-center">Hard</div>
+                        </div>
+                    </div>
                 </div>
+
                 <div className="grid col-span-6 text-gray-200 mt-8 mr-8">
                     <button onClick={changeFilter} className="cursor-pointer h-8 w-22 text-center font-semibold bg-gray-200 text-neutral-900 rounded-full">Filter</button>
                     {
