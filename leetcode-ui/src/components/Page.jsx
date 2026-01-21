@@ -5,6 +5,7 @@ import star from '../assets/star-icon.jpg'
 
 const  Page=()=>{
 
+    const [open,setOpen]=useState(true);
     const[filter,setFilter]=useState(false);
     const [list,setList]=useState([
         {
@@ -74,16 +75,32 @@ const  Page=()=>{
         setFilter(!filter);
     }
 
+    function handleOpen(){
+        setOpen(!open);
+    }
     
 
     if(!filter){
         return(
             <div className="min-h-screen bg-neutral-900 grid grid-cols-12 gap-11">
+                {/* First div (SlideBar part) */}
+                {open && (
+                    <div className="grid col-span-2 bg-neutral-700 border-amber-50 min-h-screen">
+                        <div>
+                            <button onClick={handleOpen} className=" text-gray-200 text-2xl ml-45 mt-3">✕</button>
+                            <p className="bg-neutral-600 w-45 h-9  text-gray-200 rounded-md ml-4 mt-4 flex justify-center items-center">Favorite</p>
+                        </div>
+                    </div>
+                )}
+                {!open && (
+                    <div className="fixed top-0 left-0 text-xl text-gray-200">
+                        <button onClick={handleOpen}>☰</button>
+                    </div>
+                )}
+                
+                
 
-                <div className="grid col-span-2 bg-neutral-700 border-amber-50">
-
-                </div>
-
+                {/* second div (progress part) */}
                 <div className="grid col-span-4 bg-neutral-800 mt-8 mb-30 ml-9 rounded-xl h-140">
                     <img src={star} alt="star-png" className="h-21 w-20 rounded-md ml-8 mt-8"/>
                     <h1 className="text-4xl text-gray-200 font-bold ml-8 -mt-9">Favorite</h1>
@@ -105,6 +122,7 @@ const  Page=()=>{
                     </div>
                 </div>
 
+                {/* Third div (quistions part) */}
                 <div className="grid col-span-6 text-gray-200 mt-8 mr-8">
                     <button onClick={changeFilter} className="cursor-pointer h-8 w-22 text-center font-semibold bg-gray-200 text-neutral-900 rounded-full">Filter</button>
                     {
