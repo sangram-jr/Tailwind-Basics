@@ -87,13 +87,21 @@ const  Page=()=>{
                 {open && (
                     <div className="grid col-span-2 bg-neutral-700 border-amber-50 min-h-screen">
                         <div>
-                            <button onClick={handleOpen} className=" text-gray-200 text-2xl ml-45 mt-3">✕</button>
-                            <p className="bg-neutral-600 w-45 h-9  text-gray-200 rounded-md ml-4 mt-4 flex justify-center items-center">Favorite</p>
+                            <div className="flex justify-between px-5 pt-2">
+                                <p className="text-md font-bold text-gray-200">My Lists</p>
+                                <button onClick={handleOpen} className=" text-gray-200 text-xl">☰</button> 
+                            </div>
+                            <p className="text-gray-200 font-semibold text-md mt-2 ml-5">Created By Me</p>
+                            <div className="bg-neutral-600 w-45 h-9 rounded-md ml-5 mt-4 cursor-pointer flex items-center gap-2">
+                                <img src={star} className="h-6 w-7 pl-2"/>
+                                <p className=" text-gray-200  text-center">Favorite</p>
+                            </div>
+                            
                         </div>
                     </div>
                 )}
                 {!open && (
-                    <div className="fixed top-0 left-0 text-xl text-gray-200">
+                    <div className="fixed top-2 left-2 text-xl text-gray-200">
                         <button onClick={handleOpen}>☰</button>
                     </div>
                 )}
