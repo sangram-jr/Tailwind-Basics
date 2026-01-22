@@ -82,7 +82,7 @@ const  Page=()=>{
 
     if(!filter){
         return(
-            <div className="min-h-screen grid grid-cols-12 gap-4 sm:gap-11">
+            <div className="min-h-full grid grid-cols-12 gap-4 sm:gap-11">
                 {/* First div (SlideBar part) */}
                 {!open && (
                     <div className="fixed top-2 left-2 text-xl text-gray-200 cursor-pointer sm:hidden">
@@ -90,6 +90,7 @@ const  Page=()=>{
                     </div>
                 )}
                {/* desktop-always visible,position-static   mobile- if open is true then visible ,position is fixed*/}
+               {/* translate-x-0 --> visible     -translate-x-100 ---> element moves out but in opacity element is still there , we only hide the element*/}
                 <div className={`col-span-12 sm:col-span-2 bg-neutral-700 min-h-screen transition-all duration-300 fixed top-0 left-0 w-[75%] sm:static sm:w-auto sm:translate-x-0 ${open ? "translate-x-0" : "-translate-x-full"}`}>
                     <div>
                         <div className="flex justify-between px-5 pt-2">
@@ -128,8 +129,8 @@ const  Page=()=>{
                 </div>
 
                 {/* Third div (quistions part) */}
-                <div className="grid col-span-12 sm:grid sm:col-span-6 text-gray-200 mt-8 mr-8">
-                    <button onClick={changeFilter} className="cursor-pointer h-8 w-22 text-center font-semibold bg-gray-200 text-neutral-900 rounded-full">Filter</button>
+                <div className="grid col-span-12 sm:grid sm:col-span-6 text-gray-200 mt-2 ml-2 sm:mt-8 sm:mr-8 w-full sm:w-170">
+                    <button onClick={changeFilter} className="cursor-pointer h-8 w-22 text-center font-semibold bg-gray-200 text-neutral-900 rounded-full hover:bg-gray-50">Filter</button>
                     {
                         list.map((x)=>(
                             <div key={x.id} className="bg-neutral-800 p-6 flex justify-between rounded-2xl mb-1 mr-4 mt-4">
