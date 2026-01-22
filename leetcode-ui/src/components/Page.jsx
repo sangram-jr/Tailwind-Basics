@@ -85,7 +85,7 @@ const  Page=()=>{
             <div className="min-h-full grid grid-cols-12 gap-4 sm:gap-11">
                 {/* First div (SlideBar part) */}
                 {!open && (
-                    <div className="fixed top-2 left-2 text-xl text-gray-200 cursor-pointer sm:hidden">
+                    <div className="fixed top-2 left-2  text-xl text-gray-200 cursor-pointer sm:hidden">
                         <button onClick={handleOpen}>☰</button>
                     </div>
                 )}
@@ -107,14 +107,14 @@ const  Page=()=>{
                 </div>
                 
                 {/* second div (progress part) */}
-                <div className="grid col-span-12 sm:grid sm:col-span-4 bg-neutral-800 mt-8 mb-30 rounded-xl h-140 ml-9">
+                <div className="grid col-span-12 sm:grid sm:col-span-4 bg-neutral-800 mx-4 mt-10 sm:mt-8 mb-10 sm:mb-30 rounded-xl h-140 sm:ml-9">
                     <img src={star} alt="star-png" className="h-21 w-20 rounded-md ml-8 mt-8"/>
-                    <h1 className="text-4xl text-gray-200 font-bold ml-8 -mt-9">Favorite</h1>
-                    <p className="text-gray-200 ml-8 -mt-9">Sangram . 19 quistions . private</p>
-                    <button className="ml-8 -mt-10 h-9 w-29 text-center font-semibold bg-gray-200 text-neutral-900 rounded-full">Practice</button>
-                    <div className="bg-neutral-700 h-px w-96 -mt-8 ml-8"></div>
-                    <p className=" text-gray-200 font-semibold ml-8 -mt-17">Progress</p>
-                    <div className="grid grid-cols-12 ml-8 -mt-21 mb-4">
+                    <h1 className="text-4xl text-gray-200 font-bold ml-8  sm:-mt-9">Favorite</h1>
+                    <p className="text-gray-200 ml-8 sm:-mt-9">Sangram . 19 quistions . private</p>
+                    <button className="ml-8 mt-1 sm:-mt-10 h-9 w-29 text-center font-semibold bg-gray-200 text-neutral-900 rounded-full">Practice</button>
+                    <div className="bg-neutral-700 h-px w-58 sm:w-96 mt-2 sm:-mt-8 ml-8"></div>
+                    <p className=" text-gray-200 font-semibold ml-8 sm:-mt-17">Progress</p>
+                    <div className="grid grid-cols-12 ml-8 sm:-mt-21 mb-4 w-60 sm:w-100">
                         <div className="grid col-span-12 sm:grid sm:col-span-8 bg-neutral-700 mr-4 rounded-md  justify-center items-center">
                             <div className="w-37 h-37 rounded-full border-4 border-green-600 flex justify-center items-center">
                                 <div className="text-gray-200 text-md flex flex-col"><span className="font-semibold text-3xl">19/19</span>Solved</div>
@@ -129,8 +129,8 @@ const  Page=()=>{
                 </div>
 
                 {/* Third div (quistions part) */}
-                <div className="grid col-span-12 sm:grid sm:col-span-6 text-gray-200 mt-2 ml-2 sm:mt-8 sm:mr-8 w-full sm:w-170">
-                    <button onClick={changeFilter} className="cursor-pointer h-8 w-22 text-center font-semibold bg-gray-200 text-neutral-900 rounded-full hover:bg-gray-50">Filter</button>
+                <div className="grid col-span-12 sm:grid sm:col-span-6 text-gray-200 mt-2 ml-2 sm:mt-8 sm:mr-8 sm:w-170">
+                    <button onClick={changeFilter} className="cursor-pointer h-8 w-22 text-center font-semibold bg-gray-200 text-neutral-900 rounded-full hover:bg-white">Filter</button>
                     {
                         list.map((x)=>(
                             <div key={x.id} className="bg-neutral-800 p-6 flex justify-between rounded-2xl mb-1 mr-4 mt-4">
